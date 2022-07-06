@@ -1,9 +1,10 @@
 import { createApp } from "vue";
+import router from "./router";
+
 import App from "./App.vue";
 import PrimeVue from "primevue/config";
 import AutoComplete from "primevue/autocomplete";
 import Accordion from "primevue/accordion";
-import AccordionTab from "primevue/accordiontab";
 import Avatar from "primevue/avatar";
 import AvatarGroup from "primevue/avatargroup";
 import Badge from "primevue/badge";
@@ -92,6 +93,7 @@ import TriStateCheckbox from "primevue/tristatecheckbox";
 
 const app = createApp(App);
 
+app.use(router);
 app.use(PrimeVue, { ripple: true });
 app.use(ConfirmationService);
 app.use(ToastService);
